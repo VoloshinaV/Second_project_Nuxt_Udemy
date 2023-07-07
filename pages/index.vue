@@ -4,8 +4,8 @@
       <h1>Get the latest tech news!</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link to=" '/posts/' + 1">
-        <article class="post-preview">
+      <nuxt-link to=" '/posts/' + 1" class="post-preview">
+        <article>
           <div class="post-thumbnail" style="background-image: url('https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg')"></div>
           <div class="post-content">
             <h1>Post title</h1>
@@ -13,8 +13,8 @@
           </div>
         </article>
       </nuxt-link>
-      <nuxt-link to=" '/posts/' + 2">
-        <article class="post-preview">
+      <nuxt-link to=" '/posts/' + 2" class="post-preview">
+        <article>
           <div class="post-thumbnail" style="background-image: url('https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg')"></div>
           <div class="post-content">
             <h1>Post title 2</h1>
@@ -44,7 +44,7 @@
   width: 90%;
   font-size: 1.5rem;
   color: black;
-  background-color: rgb(211 211, 211);
+  background-color: rgb(211, 211, 211);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 3px 3px 3px black;
@@ -57,6 +57,16 @@
     font-size: 2rem;
   }
 }
+
+.featured-posts {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .post-preview {
   border: 1px solid #ccc;
   box-shadow: 0 2px 2px #ccc;
@@ -93,5 +103,3 @@ a:active .post-content {
   background-color: #ccc;
 }
 </style>
-<script setup>
-</script>

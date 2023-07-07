@@ -4,28 +4,33 @@
       <h1>Get the latest tech news!</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link to=" '/posts/' + 1" class="post-preview">
-        <article>
-          <div class="post-thumbnail" style="background-image: url('https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg')"></div>
-          <div class="post-content">
-            <h1>Post title</h1>
-            <p>Preview Text</p>
-          </div>
-        </article>
-      </nuxt-link>
-      <nuxt-link to=" '/posts/' + 2" class="post-preview">
-        <article>
-          <div class="post-thumbnail" style="background-image: url('https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg')"></div>
-          <div class="post-content">
-            <h1>Post title 2</h1>
-            <p>Preview Text 2</p>
-          </div>
-        </article>
-      </nuxt-link>
+      <PostPreview
+      id ="1"
+      thumbnail="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtbFT50fetX0fpGDIl-TGaptbKNfLcyLRHftdl52MLzC-7wAaA7z_B8wa7WBwkgCj_3oI&usqp=CAU"
+      title="Hello there!"
+      previewText="This is my first post"/>
+      <PostPreview
+        id ="2"
+        thumbnail="https://www.brookings.edu/wp-content/uploads/2022/01/shutterstock_1145553203_small.jpg"
+        title="Hello!"
+        previewText="This is my second post"/>
+      <PostPreview
+        id ="3"
+        thumbnail="https://images.ctfassets.net/hrltx12pl8hq/4ACnMj4WVSOZRZt0jHu9h5/1506f652bcd70f4dc3e88219fefea858/shutterstock_739595833-min.jpg?fit=fill&w=600&h=400"
+        title="Hi!"
+        previewText="This is my third post"/>
     </section>
   </div>
 </template>
 
+<script>
+import PostPreview from '@/components/Posts/PostPreview'
+export default {
+  components: {
+    PostPreview
+  }
+}
+</script>
 
 <style scoped>
 .intro {
@@ -67,39 +72,5 @@
   justify-content: center;
 }
 
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
-}
 </style>

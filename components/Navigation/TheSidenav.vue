@@ -88,6 +88,6 @@ export default {
 
 .nav-item a:hover,
 .nav-item a:active {
-  color: red;
+  color: cornflowerblue;
 }
 </style>

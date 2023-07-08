@@ -1,20 +1,23 @@
 <template>
-  <section class="posts-lists">
+  <section class="post-list">
     <PostPreview
-      id ="1"
-      thumbnail="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtbFT50fetX0fpGDIl-TGaptbKNfLcyLRHftdl52MLzC-7wAaA7z_B8wa7WBwkgCj_3oI&usqp=CAU"
-      title="Hello there!"
-      previewText="This is my first post"/>
-    <PostPreview
-      id ="2"
+      id="1"
+      :is-admin="isAdmin"
       thumbnail="https://www.brookings.edu/wp-content/uploads/2022/01/shutterstock_1145553203_small.jpg"
-      title="Hello!"
-      previewText="This is my second post"/>
+      title="Hello there!"
+      previewText="This my first post!" />
     <PostPreview
-      id ="3"
+      id="2"
+      :is-admin="isAdmin"
       thumbnail="https://images.ctfassets.net/hrltx12pl8hq/4ACnMj4WVSOZRZt0jHu9h5/1506f652bcd70f4dc3e88219fefea858/shutterstock_739595833-min.jpg?fit=fill&w=600&h=400"
+      title="Hello there - the second time!"
+      previewText="This my second post!" />
+    <PostPreview
+      id="3"
+      :is-admin="isAdmin"
+      thumbnail="https://thumbs.dreamstime.com/z/new-future-technology-concept-abstract-background-business-solution-54350985.jpg"
       title="Hi!"
-      previewText="This is my third post"/>
+      previewText="This my third post!" />
   </section>
 </template>
 
@@ -23,12 +26,19 @@ import PostPreview from '@/components/Posts/PostPreview'
 export default {
   components: {
     PostPreview
+  },
+  props: {
+    isAdmin: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>
 
 <style scoped>
-.posts-lists {
+
+.post-list {
   display: flex;
   padding: 20px;
   box-sizing: border-box;

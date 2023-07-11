@@ -3,9 +3,9 @@
     <section class="new-post">
       <AppButton @click="$router.push('/admin/new-post')">Create Post</AppButton>
     </section>
-    <section class="existing-post">
-      <h1>Existing Post</h1>
-      <PostList isAdmin/>
+    <section class="existing-posts">
+      <h1>Existing Posts</h1>
+      <PostList isAdmin />
     </section>
   </div>
 </template>
@@ -13,6 +13,7 @@
 <script>
 import PostList from '@/components/Posts/PostList'
 import AppButton from '@/components/UI/AppButton'
+
 export default {
   layout: 'admin',
   components: {
@@ -33,7 +34,7 @@ export default {
   padding-bottom: 10px;
 }
 
-.existing-post h1 {
+.existing-posts h1 {
   text-align: center;
 }
 </style>

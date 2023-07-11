@@ -45,6 +45,7 @@ export default {
 }
 </script>
 
+
 <style scoped>
 .post-preview {
   border: 1px solid #ccc;

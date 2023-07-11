@@ -1,15 +1,14 @@
 <template>
   <div class="admin-post-page">
     <section class="update-form">
-      <AdminPostForm :post="loadedPost"/>
-
+      <AdminPostForm :post="loadedPost" />
     </section>
-
   </div>
 </template>
 
 <script>
 import AdminPostForm from '@/components/Admin/AdminPostForm'
+
 export default {
   layout: 'admin',
   components: {
@@ -18,10 +17,10 @@ export default {
   data() {
     return {
       loadedPost: {
-        author: "Viktoria Voloshina",
-        title: "My awesome Post",
-        content: "Super amazing, thanks for that!!",
-        thumbnailLink: '//thumbs.dreamstime.com/z/new-future-technology-concept-abstract-background-business-solution-54350985.jpg'
+        author: 'Viktoria',
+        title: 'My awesome Post',
+        content: 'Super amazing, thanks for that!',
+        thumbnailLink: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'
       }
     }
   }
@@ -40,32 +39,3 @@ export default {
   }
 }
 </style>
-
-<!--<template>-->
-<!--  <div class="admin-post-page">-->
-<!--    <section class="update-form">-->
-<!--      <AdminPostForm :post="loadedPost" />-->
-<!--    </section>-->
-<!--  </div>-->
-<!--</template>-->
-
-<!--<script>-->
-<!--import AdminPostForm from '@/components/Admin/AdminPostForm'-->
-
-<!--export default {-->
-<!--  components: {-->
-<!--    AdminPostForm-->
-<!--  },-->
-<!--  data() {-->
-<!--    return {-->
-<!--      loadedPost: {-->
-<!--        author: 'Voloshina',-->
-<!--        title: 'My awesome Post',-->
-<!--        content: 'Super amazing, thanks for that!',-->
-<!--        thumbnailLink: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'-->
-<!--      }-->
-<!--    }-->
-<!--  }-->
-<!--}-->
-<!--</script>-->
-

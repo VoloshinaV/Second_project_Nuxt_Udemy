@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import PostList from '@/components/Posts/PostList'
+import PostList from "@/components/Posts/PostList";
 
 export default {
   components: {
@@ -37,18 +37,18 @@ export default {
             thumbnail: 'https://thumbs.dreamstime.com/z/new-future-technology-concept-abstract-background-business-solution-54350985.jpg'
           }
         ]
-      }) ;
+      });
     }, 1500);
   },
-  // data() {
-  //   return {
-  //     loadedPosts: []
-  //   };
-  // },
-  created() {
-  }
-}
+  data() {
+    return {
+      loadedPosts: []
+    };
+  },
+  created() {}
+};
 </script>
+
 
 <style scoped>
 .intro {
@@ -56,7 +56,7 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
-  background-image: url('~assets/images/main-page-background.jpg');
+  background-image: url("~assets/images/main-page-background.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -90,6 +90,4 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
-
 </style>

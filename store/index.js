@@ -12,6 +12,9 @@ const createStore = () => {
     },
     actions: {
       nuxtServerInit(vuexContext, context) {
+        if (!process.client) {
+          console.log(context.req.session)
+        }
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             vuexContext.commit("setPosts", [
@@ -33,7 +36,7 @@ const createStore = () => {
                 previewText: 'This my third post!',
                 thumbnail: 'https://thumbs.dreamstime.com/z/new-future-technology-concept-abstract-background-business-solution-54350985.jpg'
               }
-              
+
             ]);
             resolve();
           }, 1000);

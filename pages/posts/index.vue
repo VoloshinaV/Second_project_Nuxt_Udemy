@@ -19,7 +19,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .posts-page {
   display: flex;

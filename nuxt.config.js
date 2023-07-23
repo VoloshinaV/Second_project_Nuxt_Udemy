@@ -19,13 +19,9 @@ module.exports = {
     ]
   },
 
-  /*
-  ** Customize the progress-bar color
+   /*
+  ** Global CSS
   */
-  loading: { color: '#3B8070' },
-
-  /*
-  **\
   css: [
   ],
 
@@ -49,7 +45,9 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-
     }
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://nuxt-blog-vv-default-rtdb.firebaseio.com/'
   }
 }

@@ -1,8 +1,8 @@
 import Vue from 'vue'
 
-import AppButton from "@/components/UI/AppButton"
-import AppControlInput from "@/components/UI/AppControlInput"
-import PostList from "@/components/UI/PostList"
+import AppButton from '@/components/UI/AppButton'
+import AppControlInput from '@/components/UI/AppControlInput'
+import PostList from '@/components/Posts/PostList'
 
 Vue.component('AppButton', AppButton)
 Vue.component('AppControlInput', AppControlInput)

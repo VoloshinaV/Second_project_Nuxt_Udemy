@@ -31,14 +31,19 @@ module.exports = {
   */
   plugins: [
     '~plugins/core-components.js',
-    '~plugin/date-filter.js'
+    '~plugins/date-filter.js'
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
   ],
+  axios: {
+    baseURL: process.env.BASE_URL || 'https://nuxt-blog-vv-default-rtdb.firebaseio.com/',
+    credentials: false
+  },
 
   /*
   ** Build configuration

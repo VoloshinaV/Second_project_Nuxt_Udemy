@@ -21,9 +21,9 @@ export default {
           context.params.postId +
           ".json"
       )
-      .then(res => {
+      .then(data => {
         return {
-          loadedPost: { ...res.data, id: context.params.postId }
+          loadedPost: { ...data, id: context.params.postId }
         };
       })
       .catch(e => context.error());

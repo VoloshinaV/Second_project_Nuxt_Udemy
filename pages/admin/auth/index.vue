@@ -22,20 +22,22 @@ export default {
   data() {
     return {
       isLogin: true,
-      email: "",
-      password: ""
+      email: '',
+      password: ''
     };
   },
   methods: {
     onSubmit() {
-      this.$store.dispatch("authenticateUser", {
-        isLogin: this.isLogin,
+      this.$axios.$post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + 
+      process.env.fbAPIKey, {
         email: this.email,
-        password: this.password
+        password: this.password,
+        returnSecureToken: true
       })
-        .then(() => {
-          this.$router.push('/admin');
-        });
+      .then(result => {
+        console.log(result);
+      })
+      .catch(e => console.log(e));
     }
   }
 };

@@ -101,6 +101,16 @@ const createStore = () => {
           vuexContext.commit("clearToken");
         }, duration);
       },
+      initAuth(vuexContext) {
+        const token = localStorage.getItem("token");
+        const expirationDate = localStorage.getItem("tokenExpiration");
+
+        if (new Date().getTime() > + expirationDate || !token) {
+          return;
+        }
+        vuexContext.dispatch('setLogoutTimer', + expirationDate - new Date().getTime());
+        vuexContext.commit("setToken", token);
+      }
     },
     getters: {
       loadedPosts(state) {

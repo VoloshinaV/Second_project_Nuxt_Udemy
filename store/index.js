@@ -91,21 +91,15 @@ const createStore = () => {
             localStorage.setItem("token", result.idToken);
             localStorage.setItem(
               "tokenExpiration",
-              new Date().getTime() + result.expiresIn * 1000
+              new Date().getTime() + Number.parseInt(result.expiresIn) * 1000
             );
             Cookie.set('jwt', token);
             Cookie.set(
               "expirationDate",
               new Date().getTime() + Number.parseInt(result.expiresIn) * 1000
             );
-            vuexContext.dispatch("setLogoutTimer", result.expiresIn * 1000);
           })
           .catch(e => console.log(e));
-      },
-      setLogoutTimer(vuexContext, duration) {
-        setTimeout(() => {
-          vuexContext.commit("clearToken");
-        }, duration);
       },
       initAuth(vuexContext, req) {
         let token;
